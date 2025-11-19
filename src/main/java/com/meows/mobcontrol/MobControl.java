@@ -117,7 +117,16 @@ public class MobControl extends JavaPlugin implements Listener {
             case MAGMA_CUBE -> applyMagmaCubeAttributes(event);
             case STRIDER -> applyHealthOnly(event, "strider");
 
+            // Боссы
+            case ENDER_DRAGON -> applyEnderDragonAttributes(event);
+            case WITHER -> applyWitherAttributes(event);
+
             default -> {
+                // Новый моб из 1.21.4 - проверка по имени типа (для совместимости с разными
+                // версиями API)
+                if (type.name().equals("SKREEPER")) {
+                    applyAttributes(event, "skreeper");
+                }
             }
         }
     }
@@ -183,6 +192,12 @@ public class MobControl extends JavaPlugin implements Listener {
                 double fireballDamage = config.getDouble("blaze.fireball_damage", 6.0);
                 event.setDamage(fireballDamage);
             }
+        }
+
+        // Настройка урона от черепов Иссушителя
+        if (event.getDamager() instanceof org.bukkit.entity.WitherSkull) {
+            double skullDamage = config.getDouble("wither.skull_damage", 8.0);
+            event.setDamage(skullDamage);
         }
     }
 
@@ -392,6 +407,34 @@ public class MobControl extends JavaPlugin implements Listener {
 
             if (magmaCube.getAttribute(org.bukkit.attribute.Attribute.GENERIC_ATTACK_DAMAGE) != null) {
                 magmaCube.getAttribute(org.bukkit.attribute.Attribute.GENERIC_ATTACK_DAMAGE).setBaseValue(damage);
+            }
+        }
+    }
+
+    private void applyEnderDragonAttributes(CreatureSpawnEvent event) {
+        if (event.getEntity() instanceof org.bukkit.entity.EnderDragon dragon) {
+            double health = config.getDouble("ender_dragon.health", 200.0);
+            double damage = config.getDouble("ender_dragon.damage", 10.0);
+
+            dragon.setMaxHealth(health);
+            dragon.setHealth(health);
+
+            if (dragon.getAttribute(org.bukkit.attribute.Attribute.GENERIC_ATTACK_DAMAGE) != null) {
+                dragon.getAttribute(org.bukkit.attribute.Attribute.GENERIC_ATTACK_DAMAGE).setBaseValue(damage);
+            }
+        }
+    }
+
+    private void applyWitherAttributes(CreatureSpawnEvent event) {
+        if (event.getEntity() instanceof org.bukkit.entity.Wither wither) {
+            double health = config.getDouble("wither.health", 300.0);
+            double damage = config.getDouble("wither.damage", 12.0);
+
+            wither.setMaxHealth(health);
+            wither.setHealth(health);
+
+            if (wither.getAttribute(org.bukkit.attribute.Attribute.GENERIC_ATTACK_DAMAGE) != null) {
+                wither.getAttribute(org.bukkit.attribute.Attribute.GENERIC_ATTACK_DAMAGE).setBaseValue(damage);
             }
         }
     }
