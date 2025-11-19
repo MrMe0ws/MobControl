@@ -1,0 +1,9 @@
+name: MobControl
+version: ${project.version}
+main: com.meows.mobcontrol.MobControl
+api-version: 1.21
+commands:
+  mobcontrol:
+    description: Перезагрузка конфига мобконтрол
+    usage: /<command> reload
+    permission: mobcontrol.reload

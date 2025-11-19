@@ -1,0 +1,184 @@
+zombie:
+  can_break_doors: true # Могут ли зомби ломать деревянные двери
+  normal:
+    health: 24.0 # Hard дефолт: 20.0
+    damage: 6.5 # Hard дефолт: 6.0
+  drowned:
+    health: 24.0 # Hard дефолт: 20.0
+    damage: 6.5 # Hard дефолт: 4.5
+  villager:
+    health: 24.0 # Hard дефолт: 20.0
+    damage: 6.5 # Hard дефолт: 6.0
+  husk:
+    health: 24.0 # Hard дефолт: 20.0
+    damage: 7.5 # Hard дефолт: 7.5
+  zombie_pigman:
+    health: 22.0 # Hard дефолт: 20.0
+    damage: 6.0 # Hard дефолт: 5.0
+
+skeleton:
+  normal:
+    health: 20.0 # Hard дефолт: 20.0
+    damage: 4.0 # Hard дефолт: 4.0
+    arrow_damage: 5.0 # Hard дефолт: 4.0 - Урон от стрел обычного скелета
+  stray:
+    health: 20.0 # Hard дефолт: 20.0
+    damage: 4.0 # Hard дефолт: 4.0
+    arrow_damage: 5.0 # Hard дефолт: 4.0 - Урон от стрел Stray (с эффектом замедления)
+  wither:
+    health: 24.0 # Hard дефолт: 20.0
+    damage: 9.0 # Hard дефолт: 8.0
+    arrow_damage: 9.0 # Hard дефолт: 8.0 - Урон от стрел Wither Skeleton (если стреляет)
+  bogged: # Новый моб из 1.21
+    health: 18.0 # Hard дефолт: 16.0
+    damage: 3.0 # Hard дефолт: 2.0
+    arrow_damage: 3.0 # Hard дефолт: 2.0 - Урон от отравленных стрел
+
+spider:
+  health: 20.0 # Hard дефолт: 16.0
+  damage: 5.0 # Hard дефолт: 2.0
+  cave: # Пещерный паук
+    health: 14.0 # Hard дефолт: 12.0
+    damage: 3.0 # Hard дефолт: 2.0
+
+creeper:
+  charged_chance: 0.15 # Шанс 15% спавна заряженного крипера
+  explosion_radius: 3.0 # Hard дефолт: 3.0 - Радиус взрыва обычного крипера
+  charged_explosion_radius: 6.0 # Hard дефолт: 6.0 - Радиус взрыва заряженного крипера
+
+breeze: # Моб из 1.21
+  health: 30.0 # Hard дефолт: 30.0
+  damage: 6.0 # Hard дефолт: 6.0
+  wind_charge_damage: 6.0 # Hard дефолт: 6.0
+
+# Новые мобы из 1.19 (The Wild Update)
+warden: # Страж
+  health: 600.0 # Hard дефолт: 500.0
+  damage: 36.0 # Hard дефолт: 30.0
+  melee_attack_damage: 36.0 # Hard дефолт: 30.0
+  sonic_boom_damage: 12.0 # Hard дефолт: 10.0
+
+allay: # Аллей (не атакует, только здоровье)
+  health: 20.0 # Hard дефолт: 20.0
+
+frog: # Лягушка (не атакует игроков)
+  health: 10.0 # Hard дефолт: 10.0
+
+tadpole: # Головастик (не атакует)
+  health: 6.0 # Hard дефолт: 6.0
+
+# Новые мобы из 1.20 (Trails & Tales Update)
+camel: # Верблюд (не атакует)
+  health: 32.0 # Hard дефолт: 32.0
+
+sniffer: # Нюхач (не атакует)
+  health: 14.0 # Hard дефолт: 14.0
+
+# Новый моб из 1.21
+armadillo: # Броненосец (не атакует)
+  health: 12.0 # Hard дефолт: 12.0
+
+# Другие популярные мобы
+phantom: # Фантом
+  health: 24.0 # Hard дефолт: 20.0
+  damage: 7.0 # Hard дефолт: 6.0
+
+pillager: # Разбойник
+  health: 28.0 # Hard дефолт: 24.0
+  damage: 6.0 # Hard дефолт: 5.0
+  crossbow_damage: 6.0 # Hard дефолт: 5.0 - Урон от арбалета
+
+vindicator: # Защитник
+  health: 28.0 # Hard дефолт: 24.0
+  damage: 10.0 # Hard дефолт: 9.0
+
+evoker: # Заклинатель
+  health: 28.0 # Hard дефолт: 24.0
+  damage: 7.0 # Hard дефолт: 6.0
+
+vex: # Векс
+  health: 16.0 # Hard дефолт: 14.0
+  damage: 10.0 # Hard дефолт: 9.0
+
+ravager: # Разоритель
+  health: 120.0 # Hard дефолт: 100.0
+  damage: 14.0 # Hard дефолт: 12.0
+
+piglin: # Пиглин
+  health: 18.0 # Hard дефолт: 16.0
+  damage: 6.0 # Hard дефолт: 5.0
+  crossbow_damage: 6.0 # Hard дефолт: 5.0
+
+piglin_brute: # Пиглин-брут
+  health: 60.0 # Hard дефолт: 50.0
+  damage: 8.0 # Hard дефолт: 7.0
+
+hoglin: # Хоглин
+  health: 48.0 # Hard дефолт: 40.0
+  damage: 4.0 # Hard дефолт: 3.0
+
+zoglin: # Зоглин
+  health: 48.0 # Hard дефолт: 40.0
+  damage: 4.0 # Hard дефолт: 3.0
+
+enderman: # Эндермен
+  health: 48.0 # Hard дефолт: 40.0
+  damage: 8.0 # Hard дефолт: 7.0
+
+endermite: # Эндермит
+  health: 10.0 # Hard дефолт: 8.0
+  damage: 2.5 # Hard дефолт: 2.0
+
+silverfish: # Чешуйница
+  health: 10.0 # Hard дефолт: 8.0
+  damage: 1.5 # Hard дефолт: 1.0
+
+witch: # Ведьма (не атакует напрямую, только зелья)
+  health: 30.0 # Hard дефолт: 26.0
+
+guardian: # Страж
+  health: 36.0 # Hard дефолт: 30.0
+  damage: 7.0 # Hard дефолт: 6.0
+
+elder_guardian: # Древний страж
+  health: 96.0 # Hard дефолт: 80.0
+  damage: 9.0 # Hard дефолт: 8.0
+
+shulker: # Шалкер
+  health: 36.0 # Hard дефолт: 30.0
+  damage: 5.0 # Hard дефолт: 4.0
+
+ghast: # Гаст
+  health: 12.0 # Hard дефолт: 10.0
+  damage: 7.0 # Hard дефолт: 6.0
+  fireball_damage: 7.0 # Hard дефолт: 6.0
+
+blaze: # Блейз
+  health: 24.0 # Hard дефолт: 20.0
+  damage: 7.0 # Hard дефолт: 6.0
+  fireball_damage: 7.0 # Hard дефолт: 6.0
+
+slime: # Слизень
+  small:
+    health: 1.0 # Hard дефолт: 1.0
+    damage: 0.0 # Hard дефолт: 0.0
+  medium:
+    health: 5.0 # Hard дефолт: 4.0
+    damage: 2.5 # Hard дефолт: 2.0
+  large:
+    health: 20.0 # Hard дефолт: 16.0
+    damage: 5.0 # Hard дефолт: 4.0
+
+magma_cube: # Магмовый куб
+  small:
+    health: 1.0 # Hard дефолт: 1.0
+    damage: 0.0 # Hard дефолт: 0.0
+  medium:
+    health: 5.0 # Hard дефолт: 4.0
+    damage: 2.5 # Hard дефолт: 2.0
+  large:
+    health: 20.0 # Hard дефолт: 16.0
+    damage: 5.0 # Hard дефолт: 4.0
+
+strider: # Странник (не атакует)
+  health: 20.0 # Hard дефолт: 20.0
