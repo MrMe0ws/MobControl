@@ -2,6 +2,10 @@ name: MobControl
 version: ${project.version}
 main: com.meows.mobcontrol.MobControl
 api-version: 1.21
+author: MrMeows
+description: Плагин для настройки мобов
+website: https://github.com/MrMe0ws
+
 commands:
   mobcontrol:
     description: Перезагрузка конфига мобконтрол
