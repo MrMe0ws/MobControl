@@ -237,8 +237,10 @@ public class MobControl extends JavaPlugin implements Listener {
 
         if (entity instanceof LivingEntity livingEntity) {
             double damage = config.getDouble(path + ".damage", 2.0);
-            livingEntity.getAttribute(org.bukkit.attribute.Attribute.GENERIC_ATTACK_DAMAGE)
-                    .setBaseValue(damage);
+            var attr = livingEntity.getAttribute(org.bukkit.attribute.Attribute.GENERIC_ATTACK_DAMAGE);
+            if (attr != null) {
+                attr.setBaseValue(damage);
+            }
         }
 
         // Устанавливаем способность зомби ломать двери
@@ -256,8 +258,10 @@ public class MobControl extends JavaPlugin implements Listener {
 
         if (entity instanceof LivingEntity livingEntity) {
             double damage = config.getDouble(path + ".damage", 2.0);
-            livingEntity.getAttribute(org.bukkit.attribute.Attribute.GENERIC_ATTACK_DAMAGE)
-                    .setBaseValue(damage);
+            var attr = livingEntity.getAttribute(org.bukkit.attribute.Attribute.GENERIC_ATTACK_DAMAGE);
+            if (attr != null) {
+                attr.setBaseValue(damage);
+            }
         }
     }
 
